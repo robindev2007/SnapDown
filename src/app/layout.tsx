@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "TikTok Downloader - Download TikTok Video without watermark",
   description:
     "Fastest TikTok video downloader! Save your TikTok videos in two taps, fast and free. With or without a watermark with MediaMaster TikTok mp4 video & audio downloader online",
+
+  verification: {
+    google: "F34cI-FmqcyPEdSVNhug_a4m_pbKSqI6rQzQGQ-ulEs",
+  },
 };
 
 export default function RootLayout({
