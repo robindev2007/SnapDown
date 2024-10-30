@@ -3,13 +3,15 @@ import React, { useState } from "react";
 import { DownloadInput } from "@/components/DownloadInput";
 import { getTikTokVideoData } from "./download-video";
 import { toast } from "sonner";
-import { MusicalDownResponse } from "@tobyg74/tiktok-api-dl/lib/types/downloader/musicaldown";
 import DownloadDetails from "./DownloadDetails";
+import { MusicalDownResponse } from "@tobyg74/tiktok-api-dl/lib/types/downloader/musicaldown";
 
 const TikTokMainPage = () => {
   const [loading, setLoading] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const [videoData, setVideoData] = useState<MusicalDownResponse>();
+  const [videoData, setVideoData] = useState<
+    MusicalDownResponse & { videoHD?: string }
+  >();
 
   const handleConvertPress = async () => {
     if (loading) return;

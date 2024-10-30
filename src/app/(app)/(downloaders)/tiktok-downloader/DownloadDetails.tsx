@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 import { FaGrinStars } from "react-icons/fa";
-import { MusicalDownResponse } from "@tobyg74/tiktok-api-dl/lib/types/downloader/musicaldown";
 import Image from "next/image";
+import { MusicalDownResponse } from "@tobyg74/tiktok-api-dl/lib/types/downloader/musicaldown";
 
 function DownloadDetails({ data }: { data: MusicalDownResponse["result"] }) {
   return (
@@ -34,11 +34,11 @@ function DownloadDetails({ data }: { data: MusicalDownResponse["result"] }) {
             </Button>
           </Link>
         )}
-        {data?.videoSD && (
+        {/* {data?.videoSD && (
           <Link href={data?.videoSD} download={"video.mp4"} target="_blank">
             <Button className="w-full">Withot watermark SD</Button>
           </Link>
-        )}
+        )} */}
         {data?.videoWatermark && (
           <Link href={data.videoWatermark}>
             <Button className="w-full">Watermark</Button>
