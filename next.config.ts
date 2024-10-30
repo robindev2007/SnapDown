@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         hostname: "p16-sign-sg.tiktokcdn.com",
         protocol: "https",
       },
+      {
+        hostname: "*",
+        protocol: "https",
+      },
     ],
   },
   compiler: {
