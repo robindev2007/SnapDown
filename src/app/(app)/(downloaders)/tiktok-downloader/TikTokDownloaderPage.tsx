@@ -10,7 +10,7 @@ const TikTokMainPage = () => {
   const [loading, setLoading] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [videoData, setVideoData] = useState<
-    MusicalDownResponse & { videoHD?: string }
+    MusicalDownResponse["result"] & { videoSD?: string }
   >();
 
   const handleConvertPress = async () => {
@@ -29,7 +29,7 @@ const TikTokMainPage = () => {
       return;
     }
 
-    setVideoData(data);
+    setVideoData(data?.result);
 
     setLoading(false);
   };
@@ -46,7 +46,7 @@ const TikTokMainPage = () => {
           showConvertButton={!videoData}
         />
       ) : (
-        <DownloadDetails data={videoData.result} />
+        <DownloadDetails data={videoData} />
       )}
     </div>
   );
