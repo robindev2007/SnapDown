@@ -4,6 +4,7 @@ import { formatMilliseconds } from "@/lib/utils";
 import Image from "next/image";
 import { FaGrinStars } from "react-icons/fa";
 import FileDownloaderWithProgress from "@/components/shared/FileDownloaderWithProgress";
+import { Button } from "@/components/ui/button";
 
 function DownloadDetails({ data }: { data: VideoData }) {
   const formattedDuration = formatMilliseconds(data?.duration_ms);
@@ -50,6 +51,13 @@ function DownloadDetails({ data }: { data: VideoData }) {
               Withot watermark SD
             </FileDownloaderWithProgress>
           )}
+          <Button
+            onClick={() => window.location.reload()}
+            className="w-full"
+            variant={"secondary"}
+          >
+            Download Another
+          </Button>
         </div>
       </div>
     </div>
